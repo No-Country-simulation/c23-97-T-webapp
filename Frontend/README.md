@@ -1,2 +1,2 @@
 <h1>Carpeta para Frontend</h1>
-<img src="https://github.com/user-attachments/assets/38113e83-23d4-41fb-9e09-6f6b7f75bb18" width="120px">
+<img src="https://github.com/user-attachments/assets/a7d0ff35-af40-4706-a3e3-b63a7e4d3004" width="120px">
