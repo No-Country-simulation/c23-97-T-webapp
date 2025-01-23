@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 
+// Esta parte es el Header de la pagina comun a todas las paginas
 export const Navbar = () => {
   return (
     <div className='navbar'>
