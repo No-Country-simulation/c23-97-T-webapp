@@ -24,7 +24,8 @@ export const Navbar = () => {
             <li onClick={()=>{setMenu("contact")}}>Contact{menu==="contact"?<hr/>:<></>}</li> 
         </ul>
         <div className='nav-login-cart'>
-            <button>Login</button>
+            <button className="w-40 h-12 rounded-full border border-gray-500 text-gray-700 font-medium text-lg 
+         hover:bg-gray-200 focus:outline-none active:bg-blue-500 active:text-white">Login</button>
             <img src={cart_icon} alt="carrito" className='cart_icon'/>
             <div className='nav-cart-count'>0         
             </div>
