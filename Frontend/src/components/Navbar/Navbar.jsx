@@ -9,7 +9,7 @@ import Listaitem from '../ListaItems/Listaitem.jsx'
 export const Navbar = () => {
   const [menu, setMenu] = useState("home")
   return (
-    <div className='navbar flex-col bg-[#f5f2f0] p-4'>
+    <div className='navbar flex-col bg-[#f5f2f0] p-4 flex justify-between items-center px-4 py-4 shadow-sm md:justify-around"'>
       <div className="container mx-auto flex justify-between items-center">
       <div className=" text-2xl text-[#181411] font-bold">QR Share Pro</div>
         <ul className='nav-menu hidden md:flex gap-4'>
