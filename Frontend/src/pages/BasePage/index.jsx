@@ -5,7 +5,7 @@ import { Footer } from "../../components/Footer/Footer";
 
 function BasePage() {
   return (
-    <main>
+    <main className="flex flex-col h-screen">
       <Navbar />
       <GlobalContextProvider>
         <Outlet />
