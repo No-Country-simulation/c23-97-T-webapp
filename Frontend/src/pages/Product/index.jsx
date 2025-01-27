@@ -7,7 +7,7 @@ const Product = () => {
   const { products } = useContext(GlobalContext);
 
   const url = window.location.href;
-  const id = parseInt(window.location.hash.split("/")[1]);
+  const id = parseInt(window.location.hash.split("/")[2]);
 
   const product = products.find((product) => product.id === id);
 
