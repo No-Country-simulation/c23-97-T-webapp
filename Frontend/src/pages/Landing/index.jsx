@@ -21,6 +21,9 @@ const Landing = () => {
           src={Imagen_Portada_recorte}
           alt="Imagen_Portada_recorte"
           className="w-full h-[325px] object-cover"
+          sizes="(max-width: 600px) 320px, 
+            (max-width: 900px) 640px, 
+            960px"
         />
       </div>
       <div className="mt-20 mb-10">
