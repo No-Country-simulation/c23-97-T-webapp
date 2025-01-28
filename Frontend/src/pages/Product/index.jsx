@@ -3,6 +3,7 @@ import Code from "../../components/Code";
 import Container from "../../components/Container";
 import { GlobalContext } from "../../context/Context";
 import Button from "../../components/Button";
+import NotFound from "../NotFound";
 
 const Product = () => {
   const { products } = useContext(GlobalContext);
@@ -15,11 +16,11 @@ const Product = () => {
     (product) => product.id === id && product.categoria === category
   );
 
-  if (!product) return <h1>Product not found</h1>;
+  if (!product) return <NotFound />;
 
   return (
     <Container>
-      <article className="grid grid-cols-2 gap-4 items-center md:justify-items-center md:items-start">
+      <section className="grid grid-cols-2 gap-4 items-center md:justify-items-center md:items-start">
         <img
           className="w-full max-w-96 rounded-md col-start-1 row-start-1 md:row-end-3"
           src={product.imagen_url}
@@ -36,7 +37,7 @@ const Product = () => {
         </div>
 
         <Code url={url} />
-      </article>
+      </section>
     </Container>
   );
 };

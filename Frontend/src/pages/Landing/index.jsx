@@ -10,9 +10,9 @@ const Landing = () => {
   return (
     <Container>
       <div className="mt-10">
-        <h1 className="py-10 px-10 text-brown text-2xl md:text-4xl text-center font-sans">
+        <h2 className="py-10 px-10 text-brown text-2xl md:text-4xl text-center font-sans">
           Be distinct, be yourself
-        </h1>
+        </h2>
       </div>
       <div className="mt-20">
         <img
