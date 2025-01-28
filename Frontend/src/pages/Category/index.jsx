@@ -7,7 +7,7 @@ import { GlobalContext } from "../../context/Context";
 const Category = () => {
   const { products } = useContext(GlobalContext);
 
-  const category = window.location.hash.split("/")[1];
+  const category = decodeURIComponent(window.location.hash.split("/")[1]);
 
   return (
     <Container>
@@ -22,7 +22,7 @@ const Category = () => {
               className="w-3/12 h-48"
               to={`/${category}/${product.id}`}
             >
-              {product.nombre}
+              {product.titulo}
             </Link>
           ))}
       </div>

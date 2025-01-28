@@ -29,7 +29,7 @@ const Landing = () => {
           What to expect from our stores
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
         {categories.map((category) => (
           <CategoryItem key={category.id} category={category} />
         ))}

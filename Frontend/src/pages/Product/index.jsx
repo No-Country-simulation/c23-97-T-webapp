@@ -8,7 +8,7 @@ const Product = () => {
   const { products } = useContext(GlobalContext);
 
   const url = window.location.href;
-  const category = window.location.hash.split("/")[1];
+  const category = decodeURIComponent(window.location.hash.split("/")[1]);
   const id = parseInt(window.location.hash.split("/")[2]);
 
   const product = products.find(
@@ -22,13 +22,13 @@ const Product = () => {
       <article className="grid grid-cols-2 gap-4 items-center md:justify-items-center md:items-start">
         <img
           className="w-full max-w-96 rounded-md col-start-1 row-start-1 md:row-end-3"
-          src={product.url_imagen}
-          alt={product.nombre}
+          src={product.imagen_url}
+          alt={product.titulo}
         />
 
         <div className="flex flex-col gap-4 col-start-1 row-start-2 col-end-3 md:col-start-2 md:row-start-1">
           <h2 className="font-sans text-[#8a7560] font-medium text-3xl ">
-            {product.nombre}
+            {product.titulo}
           </h2>
           <p>{product.descripcion}</p>
           <span>${product.precio}</span>
