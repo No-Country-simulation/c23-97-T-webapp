@@ -2,14 +2,18 @@ import { useContext } from "react";
 import Code from "../../components/Code";
 import Container from "../../components/Container";
 import { GlobalContext } from "../../context/Context";
+import Button from "../../components/Button";
 
 const Product = () => {
   const { products } = useContext(GlobalContext);
 
   const url = window.location.href;
+  const category = window.location.hash.split("/")[1];
   const id = parseInt(window.location.hash.split("/")[2]);
 
-  const product = products.find((product) => product.id === id);
+  const product = products.find(
+    (product) => product.id === id && product.categoria === category
+  );
 
   if (!product) return <h1>Product not found</h1>;
 
@@ -28,7 +32,7 @@ const Product = () => {
           </h2>
           <p>{product.descripcion}</p>
           <span>${product.precio}</span>
-          <button>Add to cart</button>
+          <Button>Add to cart</Button>
         </div>
 
         <Code url={url} />
