@@ -51,7 +51,7 @@ Backend:
 Instalar MySQL Community Edition 8.0 (incluyendo MySQL Workbench).
 ![Instalacion](https://github.com/user-attachments/assets/7d648678-0ff0-4508-9d3a-1ecf0df92da1)
 
-Desde MySQL Workbench, crear manualmente la base de datos, ya que Django no la crea automáticamente.
+Desde MySQL Workbench, crear manualmente la base de datos ya que Django no la crea automáticamente.
 ```bash
 CREATE DATABASE apidb CHARACTER SET utf8mb4;
 ```
@@ -91,7 +91,7 @@ Teniendo el entorno virtual de Python activado, instalar los paquetes (automáti
 pip install -r requirements.txt
 ```
 
-Los comandos makemigrations y migrate, solo funcionan si la base de datos ya ha sido creada. Si no, va a aparecer error...
+Los comandos makemigrations y migrate, solo funcionan si la base de datos ya ha sido creada. Si no, aparecen errores...
 
 Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde está el archivo manage.py para ejecutar el comando que detecta los cambios que se le van a hacer a la base de datos.
 ```bash
@@ -108,7 +108,7 @@ Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde 
 python manage.py createsuperuser
 ```
 
-* Repetidamente, se hace hincapié en que el entorno virtual de Python siempre debe estar activado y en las ubicaciones donde los comandos deben ser ejecutados para descartar posibles errores.
+* Para descartar posibles errores, repetidamente se hace hincapié en que el entorno virtual de Python siempre debe estar activado y que los comandos deben ser ejecutados en ubicaciones especificas.
 
 # Ejecutar
 
