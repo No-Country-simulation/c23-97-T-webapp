@@ -26,6 +26,7 @@ Frontend:
 Backend:
 
 - [Python 3.13.1](https://www.python.org/)
+- Pip 24.3.1
 - [MySQL Community Edition 8.0](https://dev.mysql.com/downloads/installer/)
 
 ### Instalación 🔧
