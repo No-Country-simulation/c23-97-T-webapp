@@ -4,6 +4,7 @@ export const GlobalContext = createContext();
 
 const GlobalContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   useEffect(() => {
     fetch("https://apionline-a7w9.onrender.com/api/productos/")
@@ -12,6 +13,11 @@ const GlobalContextProvider = ({ children }) => {
         setProducts(data);
       });
   }, []);
+
+  const addToCart = (product) => {
+    console.log(product);
+    setShoppingCart((prevState) => [...prevState, product]);
+  };
 
   const categories = [
     {
@@ -35,7 +41,9 @@ const GlobalContextProvider = ({ children }) => {
   ];
 
   return (
-    <GlobalContext.Provider value={{ products, categories }}>
+    <GlobalContext.Provider
+      value={{ products, categories, shoppingCart, addToCart }}
+    >
       {children}
     </GlobalContext.Provider>
   );

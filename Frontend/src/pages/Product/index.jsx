@@ -6,7 +6,7 @@ import Button from "../../components/Button";
 import NotFound from "../NotFound";
 
 const Product = () => {
-  const { products } = useContext(GlobalContext);
+  const { products, addToCart } = useContext(GlobalContext);
 
   const url = window.location.href;
   const category = decodeURIComponent(window.location.hash.split("/")[1]);
@@ -33,7 +33,7 @@ const Product = () => {
           </h2>
           <p>{product.descripcion}</p>
           <span>${product.precio}</span>
-          <Button>Add to cart</Button>
+          <Button func={() => addToCart(product)}>Add to cart</Button>
         </div>
 
         <Code url={url} />

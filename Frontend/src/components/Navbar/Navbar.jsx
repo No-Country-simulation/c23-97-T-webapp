@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router";
+import { GlobalContext } from "../../context/Context";
 //import './Navbar.css'
 //import logo from '../Assets/logo.png'
 //import Listaitem from '../ListaItems/Listaitem.jsx'
@@ -8,6 +9,7 @@ import { Link } from "react-router";
 // Aparecen menu, logo, login y compras
 // Falta hacer
 export const Navbar = () => {
+  const { shoppingCart } = useContext(GlobalContext);
   const [menu, setMenu] = useState("home");
   return (
     <div className="border border-gray-300 bg-[#f5f2f0] shadow-sm">
@@ -22,16 +24,16 @@ export const Navbar = () => {
             <Listaitem>Woman</Listaitem>
             <Listaitem>Kids</Listaitem>*/}
           <Link to="/">
-          <li
-            onClick={() => setMenu("home")}
-            className={`cursor-pointer hover:text-[#8a7560] ${
-              menu === "home"
-                ? "text-[#8a7560] border-b-2 border-[#8a7560]"
-                : ""
-            }`}
-          >
-            Home
-          </li>
+            <li
+              onClick={() => setMenu("home")}
+              className={`cursor-pointer hover:text-[#8a7560] ${
+                menu === "home"
+                  ? "text-[#8a7560] border-b-2 border-[#8a7560]"
+                  : ""
+              }`}
+            >
+              Home
+            </li>
           </Link>
           <li
             onClick={() => setMenu("about_us")}
@@ -69,10 +71,12 @@ export const Navbar = () => {
           <button className="w-32 h-10 rounded-full border border-gray-500 text-gray-700 text-sm hover:bg-gray-200 active:bg-blue-500 active:text-white">
             Login
           </button>
-          <img src={cart_icon} alt="Cart" className="w-8 h-8" />
-          <span className="absolute -top-1 right-0 transform translate-x-1 -translate-y-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-red-500 text-white text-xs">
-            0
-          </span>
+          <Link to="/cart">
+            <img src={cart_icon} alt="Cart" className="w-8 h-8" />
+            <span className="absolute -top-1 right-0 transform translate-x-1 -translate-y-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-red-500 text-white text-xs">
+              {shoppingCart.length}
+            </span>
+          </Link>
         </div>
       </div>
 
