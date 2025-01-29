@@ -129,9 +129,24 @@ python manage.py runserver
 ```
 
 Y desde el navegador web...
-- Para ingresar a la página de administración http://127.0.0.1:8000/admin/
-- Para ver todos los productos http://127.0.0.1:8000/api/productos/
-- Para ver productos por categoría (solo admite: hombre, mujer, niño) http://127.0.0.1:8000/api/hombre
+- Para ingresar a la página de administración.
+```bash
+http://127.0.0.1:8000/admin/
+```
+- Para ver todos los productos.
+```bash
+http://127.0.0.1:8000/api/productos/
+```
+- Para ver productos por categoría.
+```bash
+http://127.0.0.1:8000/api/hombre/
+```
+```bash
+http://127.0.0.1:8000/api/mujer/
+```
+```bash
+http://127.0.0.1:8000/api/niño/
+```
 
 ## Despliegue 📦
 
