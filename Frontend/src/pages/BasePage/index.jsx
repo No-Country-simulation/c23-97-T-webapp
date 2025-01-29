@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import { Navbar } from "../../components/Navbar/Navbar";
+//import { Card } from "../../components/Card/Card";
 import GlobalContextProvider from "../../context/Context";
 import { Footer } from "../../components/Footer/Footer";
 
