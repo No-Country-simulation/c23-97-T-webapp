@@ -37,8 +37,10 @@ Para clonar el repositorio, abre tu terminal y ejecuta el siguiente comando:
 ```bash
 git clone https://github.com/No-Country-simulation/c23-97-T-webapp.git
 ```
+<br>
 
-Una vez clonado el repositorio, abre tu terminal y ejecuta los siguentes comandos para instalar las dependencias necesarias la cuales estan separadas en las carpetas `Frontend` y `Backend`:<br><br>
+Una vez clonado el repositorio, abre tu terminal y ejecuta los siguentes comandos para instalar las dependencias necesarias la cuales estan separadas en las carpetas `Frontend` y `Backend`:
+<br>
 
 ### Frontend:
 
@@ -46,7 +48,6 @@ Una vez clonado el repositorio, abre tu terminal y ejecuta los siguentes comando
 cd Frontend
 npm install
 ```
-<br>
 
 ### Backend:
 
