@@ -158,17 +158,17 @@ Las tecnologías que se utilizaron para crear el proyecto:
 
 Frontend:
 
-- [ReactJS](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [React Router](https://reactrouter.com/)
+- [ReactJS](https://reactjs.org/) Biblioteca para la creación de interfaces de usuario
+- [Tailwind CSS](https://tailwindcss.com/) Framework de estilos CSS 
+- [Vite](https://vitejs.dev/) Herramienta de desarrollo de aplicaciones
+- [React Router](https://reactrouter.com/) Biblioteca de navegación para aplicaciones de React
 
 BackEnd:
 
-- [Django](https://www.djangoproject.com/)
-- [Render](https://render.com/)
-- [Aiven](https://aiven.io/)
-- [Cloudinary](https://cloudinary.com/)
+- [Django](https://www.djangoproject.com/) Framework para el desarrollo de aplicaciones web
+- [Render](https://render.com/) Alojamiento de aplicaciones
+- [Aiven](https://aiven.io/) Servicio de base de datos
+- [Cloudinary](https://cloudinary.com/) Gestión de archivos multimedia
 
 ## Autores ✒️
 
