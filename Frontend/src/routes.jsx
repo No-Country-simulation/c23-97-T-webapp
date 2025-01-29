@@ -4,6 +4,7 @@ import Landing from "./pages/Landing";
 import Product from "./pages/Product";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
+import ShopingCart from "./pages/ShopingCart";
 
 function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<BasePage />}>
           <Route index element={<Landing />} />
+          <Route path="cart" element={<ShopingCart />} />
           <Route path=":category" element={<Category />} />
           <Route path=":category/:id" element={<Product />} />
           <Route path="*" element={<NotFound />} />

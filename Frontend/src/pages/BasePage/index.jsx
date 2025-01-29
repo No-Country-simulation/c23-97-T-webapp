@@ -6,11 +6,11 @@ import { Footer } from "../../components/Footer/Footer";
 function BasePage() {
   return (
     <main className="flex flex-col h-screen">
-      <Navbar />
       <GlobalContextProvider>
+        <Navbar />
         <Outlet />
+        <Footer />
       </GlobalContextProvider>
-      <Footer />
     </main>
   );
 }
