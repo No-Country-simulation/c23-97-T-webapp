@@ -48,6 +48,8 @@ npm install
 
 Backend:
 
+* Para descartar posibles errores, repetidamente se hace hincapié en que el entorno virtual de Python siempre debe estar activado y que los comandos deben ser ejecutados en ubicaciones especificas.
+
 Instalar MySQL Community Edition 8.0 (incluyendo MySQL Workbench).
 ![Instalacion](https://github.com/user-attachments/assets/7d648678-0ff0-4508-9d3a-1ecf0df92da1)
 
@@ -107,8 +109,6 @@ Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde 
 ```bash
 python manage.py createsuperuser
 ```
-
-* Para descartar posibles errores, repetidamente se hace hincapié en que el entorno virtual de Python siempre debe estar activado y que los comandos deben ser ejecutados en ubicaciones especificas.
 
 # Ejecutar
 
