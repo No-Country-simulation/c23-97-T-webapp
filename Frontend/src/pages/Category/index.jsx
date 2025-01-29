@@ -4,6 +4,7 @@ import Search from "../../components/Search";
 import { Link } from "react-router";
 import { GlobalContext } from "../../context/Context";
 import NotFound from "../NotFound";
+import Card from "../../components/Card/Card";
 
 const Category = () => {
   const { products, categories } = useContext(GlobalContext);
@@ -25,10 +26,10 @@ const Category = () => {
           .map((product) => (
             <Link
               key={product.id}
-              className="w-3/12 h-48"
+              
               to={`/${category}/${product.id}`}
             >
-              {product.titulo}
+              <Card product={product}/>
             </Link>
           ))}
       </section>
