@@ -129,16 +129,17 @@ Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde 
 python manage.py runserver
 ```
 
-Y desde el navegador web...
-- Para ingresar a la página de administración.
+Para ingresar a la página de administración.
 ```bash
 http://127.0.0.1:8000/admin/
 ```
-- Para ver todos los productos.
+
+Para ver todos los productos.
 ```bash
 http://127.0.0.1:8000/api/productos/
 ```
-- Para ver productos por categoría.
+
+Para ver productos por categoría.
 ```bash
 http://127.0.0.1:8000/api/hombre/
 ```
