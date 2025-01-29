@@ -13,7 +13,7 @@ En Windows, si deseas usar este proyecto como base para tu propio proyecto, pued
 
 Mira **Deployment** para ver el despliegue del proyecto.<br><br>
 
-### Pre-requisitos 📋
+## Pre-requisitos 📋
 
 Como desarrollador, necesitarás tener instalados los siguientes programas:
 
@@ -40,7 +40,7 @@ git clone https://github.com/No-Country-simulation/c23-97-T-webapp.git
 
 Una vez clonado el repositorio, abre tu terminal y ejecuta los siguentes comandos para instalar las dependencias necesarias la cuales estan separadas en las carpetas `Frontend` y `Backend`:<br><br>
 
-**Frontend:**
+### Frontend:
 
 ```bash
 cd Frontend
@@ -48,7 +48,7 @@ npm install
 ```
 <br>
 
-**Backend:**
+### Backend:
 
 > ***Para descartar posibles errores, repetidamente se hace hincapié en que el entorno virtual de Python siempre debe estar activado y que los comandos deben ser ejecutados en ubicaciones especificas.***
 
@@ -117,7 +117,7 @@ python manage.py createsuperuser
 
 ## Ejecución 🏁
 
-**Frontend:**
+### Frontend:
 
 ```bash
 cd Frontend
@@ -126,7 +126,7 @@ npm run dev
 
 Una vez ejecutado el entorno de desarrollo, abre tu navegador y ingresa la dirección `http://localhost:5173/` para ver el proyecto en acción.<br><br>
 
-**Backend:**
+### Backend:
 
 Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde está el archivo `manage.py` para ejecutar el proyecto de Django.
 ```bash
