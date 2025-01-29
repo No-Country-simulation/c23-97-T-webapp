@@ -110,7 +110,7 @@ Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde 
 python manage.py createsuperuser
 ```
 
-## Ejecución
+## Ejecución 🏁
 
 Frontend:
 
