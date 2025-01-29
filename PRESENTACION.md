@@ -145,7 +145,7 @@ http://127.0.0.1:8000/api/hombre/
 http://127.0.0.1:8000/api/mujer/
 ```
 ```bash
-http://127.0.0.1:8000/api/niño/
+http://127.0.0.1:8000/api/niños/
 ```
 
 ## Despliegue 📦
