@@ -41,7 +41,7 @@ const Landing = () => {
       <div className="bg-[#f5f2f0] rounded-lg overflow-hidden shadow-md border border-gray-300 max-w-sm">
         <div className="relative h-40">
           <img
-            className="w-full h-full object-cover object-top rounded-[2rem]" // Redondeado con radio mayor
+            className="w-full h-full object-cover object-center rounded-[2rem]" // Redondeado con radio mayor
             src={chaqueta_gris_c0gqt6}
             alt="foto"
           />
