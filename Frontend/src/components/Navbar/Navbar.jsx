@@ -21,6 +21,7 @@ export const Navbar = () => {
             <Listaitem>Men</Listaitem>
             <Listaitem>Woman</Listaitem>
             <Listaitem>Kids</Listaitem>*/}
+          <Link to="/">
           <li
             onClick={() => setMenu("home")}
             className={`cursor-pointer hover:text-[#8a7560] ${
@@ -31,6 +32,7 @@ export const Navbar = () => {
           >
             Home
           </li>
+          </Link>
           <li
             onClick={() => setMenu("about_us")}
             className={`cursor-pointer hover:text-[#8a7560] ${
