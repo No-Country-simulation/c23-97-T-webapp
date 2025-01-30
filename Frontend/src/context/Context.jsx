@@ -4,41 +4,25 @@ export const GlobalContext = createContext();
 
 const GlobalContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
 
   useEffect(() => {
-    fetch("https://apionline-a7w9.onrender.com/api/productos/")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
+    getData("productos", setProducts);
+    getData("tarjetas", setCategories);
   }, []);
 
-  const addToCart = (product) => {
-    console.log(product);
-    setShoppingCart((prevState) => [...prevState, product]);
+  const getData = async (endpoint, set) => {
+    const response = await fetch(
+      `https://apionline-a7w9.onrender.com/api/${endpoint}/`
+    );
+    const data = await response.json();
+    set(data);
   };
 
-  const categories = [
-    {
-      id: 1,
-      nombre: "hombre",
-      descripcion:
-        "Si estás buscando las últimas prendas masculinas con estilos y modas en tendencia, encontrarás todo eso en un solo lugar: QR share pro.",
-    },
-    {
-      id: 2,
-      nombre: "mujer",
-      descripcion:
-        "Desde las modas femeninas en tendencia hasta las piezas de calidad que has estado buscando, ten la seguridad de que te tenemos cubierto.",
-    },
-    {
-      id: 3,
-      nombre: "niño",
-      descripcion:
-        "Nuestras tiendas cuentan con una amplia gama de ropa para niños y bebés con más de 300 marcas.",
-    },
-  ];
+  const addToCart = (product) => {
+    setShoppingCart((prevState) => [...prevState, product]);
+  };
 
   return (
     <GlobalContext.Provider

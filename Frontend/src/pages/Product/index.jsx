@@ -13,7 +13,8 @@ const Product = () => {
   const id = parseInt(window.location.hash.split("/")[2]);
 
   const product = products.find(
-    (product) => product.id === id && product.categoria === category
+    (product) =>
+      product.id === id && product.categoria === category.toLocaleLowerCase()
   );
 
   if (!product) return <NotFound />;

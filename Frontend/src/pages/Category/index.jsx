@@ -10,8 +10,9 @@ const Category = () => {
   const { products, categories } = useContext(GlobalContext);
 
   const category = decodeURIComponent(window.location.hash.split("/")[1]);
+
   const validCategory = categories
-    .map((category) => category.nombre)
+    .map((category) => category.encabezado)
     .includes(category);
 
   if (!validCategory) return <NotFound />;
@@ -22,14 +23,12 @@ const Category = () => {
 
       <section className="flex flex-wrap gap-4 justify-center mt-8">
         {products
-          .filter((product) => product.categoria === category)
+          .filter(
+            (product) => product.categoria === category.toLocaleLowerCase()
+          )
           .map((product) => (
-            <Link
-              key={product.id}
-              
-              to={`/${category}/${product.id}`}
-            >
-              <Card product={product}/>
+            <Link key={product.id} to={`/${category}/${product.id}`}>
+              <Card product={product} />
             </Link>
           ))}
       </section>
