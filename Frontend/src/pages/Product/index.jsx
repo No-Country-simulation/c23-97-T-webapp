@@ -21,7 +21,7 @@ const Product = () => {
 
   return (
     <Container>
-      <section className="grid grid-cols-2 gap-4 items-center md:justify-items-center md:items-start">
+      <section className="grid grid-cols-2 gap-12 items-center md:grid-cols-[24rem_1fr] md:items-start md:gap-16 md:gap-y-12">
         <img
           className="w-full max-w-96 rounded-md col-start-1 row-start-1 md:row-end-3"
           src={product.imagen_url}
@@ -29,10 +29,10 @@ const Product = () => {
         />
 
         <div className="flex flex-col gap-4 col-start-1 row-start-2 col-end-3 md:col-start-2 md:row-start-1">
-          <h2 className="font-sans text-[#8a7560] font-medium text-3xl ">
+          <h2 className="font-sans text-[#8a7560] font-medium text-3xl text-balance">
             {product.titulo}
           </h2>
-          <p>{product.descripcion}</p>
+          <p className="text-pretty">{product.descripcion}</p>
           <span>${product.precio}</span>
           <Button func={() => addToCart(product)}>Add to cart</Button>
         </div>
