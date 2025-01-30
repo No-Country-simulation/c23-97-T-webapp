@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
 
 class Producto(models.Model):
     titulo = models.CharField(max_length=100)
@@ -12,3 +10,13 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+# debería haber una tabla Categoria, para usar una clave foránea
+# y no repetir el campo "categoria" en esta tabla Tarjeta
+class Tarjeta(models.Model):
+    encabezado = models.CharField(max_length=6)
+    cuerpo = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.encabezado
