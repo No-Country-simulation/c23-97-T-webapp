@@ -73,10 +73,13 @@ export const Navbar = () => {
           </Link>
         </ul>
         {/* Login and Cart */}
+        
         <div className="relative flex items-center gap-4 mt-4 md:mt-0">
+          <Link to="/login">
           <button className="w-32 h-10 rounded-full border border-gray-500 text-gray-700 text-sm hover:bg-gray-200 active:bg-blue-500 active:text-white">
             Login
           </button>
+          </Link>
           <Link to="/cart">
             <img src={cart_icon} alt="Cart" className="w-8 h-8" />
             <span className="absolute -top-1 right-0 transform translate-x-1 -translate-y-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-red-500 text-white text-xs">
