@@ -159,6 +159,24 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
+Para ver <ins>todas</ins> las tarjetas que muestran información en la parte de abajo del home.
+```bash
+http://127.0.0.1:8000/api/tarjetas/
+```
+<br>
+
+Para ver las tarjetas, según la <ins>categoría</ins>.
+```bash
+http://127.0.0.1:8000/api/tarjetas/hombre/
+```
+```bash
+http://127.0.0.1:8000/api/tarjetas/mujer/
+```
+```bash
+http://127.0.0.1:8000/api/tarjetas/niño/
+```
+<br>
+
 ## Despliegue 📦
 
 El proyecto se encuentra desplegado en la siguiente URL: https://qr-share-pro.netlify.app/
