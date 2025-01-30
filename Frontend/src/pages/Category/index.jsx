@@ -21,7 +21,7 @@ const Category = () => {
     <Container>
       <Search />
 
-      <section className="flex flex-wrap gap-4 justify-center mt-8">
+      <section className="flex flex-wrap gap-10 justify-center mt-12">
         {products
           .filter(
             (product) => product.categoria === category.toLocaleLowerCase()
