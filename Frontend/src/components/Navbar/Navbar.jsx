@@ -82,38 +82,18 @@ export const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="flex md:hidden justify-around items-center mt-4">
-        <button
-          onClick={() => setMenu("home")}
-          className={`flex-1 text-center py-2 ${
-            menu === "home" ? "text-[#8a7560]" : "text-[#181411]"
-          }`}
-        >
-          Home
-        </button>
-        <button
-          onClick={() => setMenu("about_us")}
-          className={`flex-1 text-center py-2 ${
-            menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"
-          }`}
-        >
+        <Link to="/" className={`flex-1 text-center py-2 ${menu === "home" ? "text-[#8a7560]" : "text-[#181411]"}`}>
+          Home  {/* Texto dentro del Link */}
+        </Link>
+        <Link to="/about_us" className={`flex-1 text-center py-2 ${menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"}`}>
           About Us
-        </button>
-        <button
-          onClick={() => setMenu("services")}
-          className={`flex-1 text-center py-2 ${
-            menu === "services" ? "text-[#8a7560]" : "text-[#181411]"
-          }`}
-        >
+        </Link>
+        <Link to="/services" className={`flex-1 text-center py-2 ${menu === "services" ? "text-[#8a7560]" : "text-[#181411]"}`}>
           Services
-        </button>
-        <button
-          onClick={() => setMenu("contact")}
-          className={`flex-1 text-center py-2 ${
-            menu === "contact" ? "text-[#8a7560]" : "text-[#181411]"
-          }`}
-        >
+        </Link>
+        <Link to="/contact" className={`flex-1 text-center py-2 ${menu === "contact" ? "text-[#8a7560]" : "text-[#181411]"}`}>
           Contact
-        </button>
+        </Link>
       </div>
     </div>
   );

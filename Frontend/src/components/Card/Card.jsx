@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 const Card = ({ product }) => {
   return (
@@ -11,9 +11,9 @@ const Card = ({ product }) => {
         />        
       </div>
       <div className="p-4">
-        <h3 className="text-[#181411] font-bold text-lg mb-2">
-          {product.titulo}
-        </h3>
+      <h3 className="text-[#181411] font-bold text-lg mb-2 h-12">
+        {product.titulo}
+      </h3>
         <div className="flex justify-between items-center">
           <span className="text-[#8a7560] font-semibold text-lg">${product.precio}</span>          
         </div>
