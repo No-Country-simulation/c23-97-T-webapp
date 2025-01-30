@@ -149,13 +149,13 @@ http://127.0.0.1:8000/api/productos/
 
 Para ver productos por <ins>categoría</ins>.
 ```bash
-http://127.0.0.1:8000/api/hombre/
+http://127.0.0.1:8000/api/productos/hombre/
 ```
 ```bash
-http://127.0.0.1:8000/api/mujer/
+http://127.0.0.1:8000/api/productos/mujer/
 ```
 ```bash
-http://127.0.0.1:8000/api/niños/
+http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
