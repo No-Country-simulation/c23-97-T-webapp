@@ -35,6 +35,7 @@ export const Navbar = () => {
               Home
             </li>
           </Link>
+          <Link to="/about_us">
           <li
             onClick={() => setMenu("about_us")}
             className={`cursor-pointer hover:text-[#8a7560] ${
@@ -45,6 +46,8 @@ export const Navbar = () => {
           >
             About us
           </li>
+          </Link>
+          <Link to="/services">
           <li
             onClick={() => setMenu("services")}
             className={`cursor-pointer hover:text-[#8a7560] ${
@@ -55,6 +58,8 @@ export const Navbar = () => {
           >
             Services
           </li>
+          </Link>
+          <Link to="/contact">
           <li
             onClick={() => setMenu("contact")}
             className={`cursor-pointer hover:text-[#8a7560] ${
@@ -65,6 +70,7 @@ export const Navbar = () => {
           >
             Contact
           </li>
+          </Link>
         </ul>
         {/* Login and Cart */}
         <div className="relative flex items-center gap-4 mt-4 md:mt-0">
