@@ -179,7 +179,7 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
-### Pasar parámetros a través de la URL
+### Pasar parámetro a través de la URL
 Estando dentro de una categoría, <ins>buscar una palabra que esté en el título</ins> de un producto.
 ```bash
 http://127.0.0.1:8000/api/productos/hombre/?titulo=palabra
