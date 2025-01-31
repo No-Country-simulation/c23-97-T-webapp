@@ -141,6 +141,24 @@ http://127.0.0.1:8000/admin/
 ```
 <br>
 
+Para ver <ins>todas</ins> las tarjetas que muestran información de las categorías en la parte de abajo de la página home.
+```bash
+http://127.0.0.1:8000/api/tarjetas/
+```
+<br>
+
+Para ver las tarjetas, según la <ins>categoría</ins>.
+```bash
+http://127.0.0.1:8000/api/tarjetas/hombre/
+```
+```bash
+http://127.0.0.1:8000/api/tarjetas/mujer/
+```
+```bash
+http://127.0.0.1:8000/api/tarjetas/niño/
+```
+<br>
+
 Para ver <ins>todos</ins> los productos.
 ```bash
 http://127.0.0.1:8000/api/productos/
@@ -159,21 +177,15 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
-Para ver <ins>todas</ins> las tarjetas que muestran información de las categorías en la parte de abajo de la página home.
+Estando dentro de una categoría, <ins>buscar una palabra dentro del título</ins> de un producto.
 ```bash
-http://127.0.0.1:8000/api/tarjetas/
-```
-<br>
-
-Para ver las tarjetas, según la <ins>categoría</ins>.
-```bash
-http://127.0.0.1:8000/api/tarjetas/hombre/
+http://127.0.0.1:8000/api/productos/hombre/?titulo=palabra
 ```
 ```bash
-http://127.0.0.1:8000/api/tarjetas/mujer/
+http://127.0.0.1:8000/api/productos/mujer/?titulo=palabra
 ```
 ```bash
-http://127.0.0.1:8000/api/tarjetas/niño/
+http://127.0.0.1:8000/api/productos/niño/?titulo=palabra
 ```
 <br>
 
