@@ -1,10 +1,14 @@
 import React from 'react'
+import Container from "../../components/Container";
 
 export const About_us = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <Container>
+    {/*<div className="flex flex-col min-h-screen">*/}
+    <div className="flex flex-col gap-4 w-full items-center">
         <h1 className="text-2xl font-bold text-black">About us</h1>
     </div>
+    </Container>
   )
 }
 
