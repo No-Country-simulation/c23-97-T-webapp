@@ -87,7 +87,7 @@ En la carpeta principal donde está el archivo `manage.py` crear un entorno virt
 python -m venv entornoVirtual
 ```
 
-Activar el entorno virtual (si se está usando PowerShell, ejecutar el script .ps1)
+Activar el entorno virtual (si se está usando PowerShell, ejecutar el script `.ps1`)
 ```bash
 .\entornoVirtual\Scripts\Activate.ps1
 ```
