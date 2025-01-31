@@ -141,7 +141,8 @@ http://127.0.0.1:8000/admin/
 ```
 <br>
 
-Para ver <ins>todas</ins> las tarjetas que muestran información de las categorías en la parte de abajo de la página home.
+### Tarjetas
+Para ver <ins>todas</ins> las tarjetas, que muestran información de las categorías y están en la parte de abajo de todo de la página home.
 ```bash
 http://127.0.0.1:8000/api/tarjetas/
 ```
@@ -159,6 +160,7 @@ http://127.0.0.1:8000/api/tarjetas/niño/
 ```
 <br>
 
+### Productos
 Para ver <ins>todos</ins> los productos.
 ```bash
 http://127.0.0.1:8000/api/productos/
@@ -177,6 +179,7 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
+### Pasar parámetros a través de la URL
 Estando dentro de una categoría, <ins>buscar una palabra que esté en el título</ins> de un producto.
 ```bash
 http://127.0.0.1:8000/api/productos/hombre/?titulo=palabra
