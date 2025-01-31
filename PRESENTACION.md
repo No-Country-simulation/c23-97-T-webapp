@@ -177,7 +177,7 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
-Estando dentro de una categoría, <ins>buscar una palabra dentro del título</ins> de un producto.
+Estando dentro de una categoría, <ins>buscar una palabra que esté en el título</ins> de un producto.
 ```bash
 http://127.0.0.1:8000/api/productos/hombre/?titulo=palabra
 ```
