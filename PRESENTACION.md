@@ -159,7 +159,7 @@ http://127.0.0.1:8000/api/productos/niño/
 ```
 <br>
 
-Para ver <ins>todas</ins> las tarjetas que muestran información en la parte de abajo del home.
+Para ver <ins>todas</ins> las tarjetas que muestran información de la categorías en la parte de abajo del home.
 ```bash
 http://127.0.0.1:8000/api/tarjetas/
 ```
