@@ -67,11 +67,11 @@ Editar el archivo que está en `proyecto\settings.py` para modificar el acceso a
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': apidb,
-        'USER': tu_usuario_de_mysql,
-        'PASSWORD': tu_contraseña_de_mysql,
-        'HOST': tu_localhost,
-        'PORT': el_puerto_de_tu_localhost,
+        'NAME': 'apidb',
+        'USER': 'tu_usuario_de_mysql',
+        'PASSWORD': 'tu_contraseña_de_mysql',
+        'HOST': 'tu_localhost',
+        'PORT': 'el_puerto_de_tu_localhost',
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
