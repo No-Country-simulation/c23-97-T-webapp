@@ -34,7 +34,9 @@ const Product = () => {
           </h2>
           <p className="text-pretty">{product.descripcion}</p>
           <span>${product.precio}</span>
-          <Button func={() => addToCart(product)}>Add to cart</Button>
+          <div className="flex flex-col gap-4 w-52 self-center">
+            <Button func={() => addToCart(product)}>Add to cart</Button>
+          </div>
         </div>
 
         <Code url={url} />
