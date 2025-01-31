@@ -98,7 +98,7 @@ pip install -r requirements.txt
 ```
 <br>
 
-> Los comandos `makemigrations` y `migrate`, solo funcionan <ins>si la base de datos ya ha sido creada</ins>.
+> Los comandos `makemigrations` y `migrate` solo funcionan <ins>si la base de datos ya ha sido creada</ins>.
 
 Teniendo el entorno virtual de Python activado, ir a la carpeta principal donde está el archivo `manage.py` para ejecutar el comando que detecta los cambios que se le van a hacer a la base de datos.
 ```bash
