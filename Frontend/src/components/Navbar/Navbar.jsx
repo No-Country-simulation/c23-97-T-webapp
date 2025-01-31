@@ -9,7 +9,7 @@ import { GlobalContext } from "../../context/Context";
 // Aparecen menu, logo, login y compras
 // Falta hacer
 export const Navbar = () => {
-  const { shoppingCart } = useContext(GlobalContext);
+  const { totalItems } = useContext(GlobalContext);
   const [menu, setMenu] = useState("home");
   return (
     <div className="border border-gray-300 bg-[#f5f2f0] shadow-sm">
@@ -36,40 +36,40 @@ export const Navbar = () => {
             </li>
           </Link>
           <Link to="/about_us">
-          <li
-            onClick={() => setMenu("about_us")}
-            className={`cursor-pointer hover:text-[#8a7560] ${
-              menu === "about_us"
-                ? "text-[#8a7560] border-b-2 border-[#8a7560]"
-                : ""
-            }`}
-          >
-            About us
-          </li>
+            <li
+              onClick={() => setMenu("about_us")}
+              className={`cursor-pointer hover:text-[#8a7560] ${
+                menu === "about_us"
+                  ? "text-[#8a7560] border-b-2 border-[#8a7560]"
+                  : ""
+              }`}
+            >
+              About us
+            </li>
           </Link>
           <Link to="/services">
-          <li
-            onClick={() => setMenu("services")}
-            className={`cursor-pointer hover:text-[#8a7560] ${
-              menu === "services"
-                ? "text-[#8a7560] border-b-2 border-[#8a7560]"
-                : ""
-            }`}
-          >
-            Services
-          </li>
+            <li
+              onClick={() => setMenu("services")}
+              className={`cursor-pointer hover:text-[#8a7560] ${
+                menu === "services"
+                  ? "text-[#8a7560] border-b-2 border-[#8a7560]"
+                  : ""
+              }`}
+            >
+              Services
+            </li>
           </Link>
           <Link to="/contact">
-          <li
-            onClick={() => setMenu("contact")}
-            className={`cursor-pointer hover:text-[#8a7560] ${
-              menu === "contact"
-                ? "text-[#8a7560] border-b-2 border-[#8a7560]"
-                : ""
-            }`}
-          >
-            Contact
-          </li>
+            <li
+              onClick={() => setMenu("contact")}
+              className={`cursor-pointer hover:text-[#8a7560] ${
+                menu === "contact"
+                  ? "text-[#8a7560] border-b-2 border-[#8a7560]"
+                  : ""
+              }`}
+            >
+              Contact
+            </li>
           </Link>
         </ul>
         {/* Login and Cart */}
@@ -80,7 +80,7 @@ export const Navbar = () => {
           <Link to="/cart">
             <img src={cart_icon} alt="Cart" className="w-8 h-8" />
             <span className="absolute -top-1 right-0 transform translate-x-1 -translate-y-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-red-500 text-white text-xs">
-              {shoppingCart.length}
+              {totalItems}
             </span>
           </Link>
         </div>
@@ -88,16 +88,36 @@ export const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="flex md:hidden justify-around items-center mt-4">
-        <Link to="/" className={`flex-1 text-center py-2 ${menu === "home" ? "text-[#8a7560]" : "text-[#181411]"}`}>
-          Home  {/* Texto dentro del Link */}
+        <Link
+          to="/"
+          className={`flex-1 text-center py-2 ${
+            menu === "home" ? "text-[#8a7560]" : "text-[#181411]"
+          }`}
+        >
+          Home {/* Texto dentro del Link */}
         </Link>
-        <Link to="/about_us" className={`flex-1 text-center py-2 ${menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"}`}>
+        <Link
+          to="/about_us"
+          className={`flex-1 text-center py-2 ${
+            menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"
+          }`}
+        >
           About Us
         </Link>
-        <Link to="/services" className={`flex-1 text-center py-2 ${menu === "services" ? "text-[#8a7560]" : "text-[#181411]"}`}>
+        <Link
+          to="/services"
+          className={`flex-1 text-center py-2 ${
+            menu === "services" ? "text-[#8a7560]" : "text-[#181411]"
+          }`}
+        >
           Services
         </Link>
-        <Link to="/contact" className={`flex-1 text-center py-2 ${menu === "contact" ? "text-[#8a7560]" : "text-[#181411]"}`}>
+        <Link
+          to="/contact"
+          className={`flex-1 text-center py-2 ${
+            menu === "contact" ? "text-[#8a7560]" : "text-[#181411]"
+          }`}
+        >
           Contact
         </Link>
       </div>
