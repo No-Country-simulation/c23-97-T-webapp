@@ -32,7 +32,7 @@ export const Navbar = () => {
                   : ""
               }`}
             >
-              Home
+              Inicio
             </li>
           </Link>
           <Link to="/about_us">
@@ -44,7 +44,7 @@ export const Navbar = () => {
                   : ""
               }`}
             >
-              About us
+              Sobre nosotros
             </li>
           </Link>
           <Link to="/services">
@@ -56,7 +56,7 @@ export const Navbar = () => {
                   : ""
               }`}
             >
-              Services
+              Servicios
             </li>
           </Link>
           <Link to="/contact">
@@ -68,17 +68,17 @@ export const Navbar = () => {
                   : ""
               }`}
             >
-              Contact
+              Contacto
             </li>
           </Link>
         </ul>
         {/* Login and Cart */}
-        
+
         <div className="relative flex items-center gap-4 mt-4 md:mt-0">
           <Link to="/login">
-          <button className="w-32 h-10 rounded-full border border-gray-500 text-gray-700 text-sm hover:bg-gray-200 active:bg-blue-500 active:text-white">
-            Login
-          </button>
+            <button className="w-32 h-10 rounded-full border border-gray-500 text-gray-700 text-sm hover:bg-gray-200 active:bg-blue-500 active:text-white">
+              Login
+            </button>
           </Link>
           <Link to="/cart">
             <img src={cart_icon} alt="Cart" className="w-8 h-8" />
@@ -97,7 +97,7 @@ export const Navbar = () => {
             menu === "home" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          Home {/* Texto dentro del Link */}
+          Inicio {/* Texto dentro del Link */}
         </Link>
         <Link
           to="/about_us"
@@ -105,7 +105,7 @@ export const Navbar = () => {
             menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          About Us
+          Sobre nosotros
         </Link>
         <Link
           to="/services"
@@ -113,7 +113,7 @@ export const Navbar = () => {
             menu === "services" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          Services
+          Servicios
         </Link>
         <Link
           to="/contact"
@@ -121,7 +121,7 @@ export const Navbar = () => {
             menu === "contact" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          Contact
+          Contacto
         </Link>
       </div>
     </div>

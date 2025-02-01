@@ -12,7 +12,7 @@ const Landing = () => {
     <Container>
       <div className="mt-10">
         <h2 className="py-10 px-10 text-brown text-2xl md:text-4xl text-center font-sans">
-          Be distinct, be yourself
+          Sé distinto, sé tú mismo
         </h2>
       </div>
       <div className="mt-20">
@@ -27,7 +27,7 @@ const Landing = () => {
       </div>
       <div className="mt-20 mb-10">
         <h1 className="py-10 px-10 text-brown text-2xl md:text-4xl text-center font-sans">
-          What to expect from our stores
+          Qué esperar de nuestras tiendas
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
