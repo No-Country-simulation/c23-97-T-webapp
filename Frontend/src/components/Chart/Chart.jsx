@@ -1,6 +1,9 @@
 import React from 'react'
 
+
+
 export const Chart = ({ items }) => {
+  const precioFormatedo = Number(item.precio).toFixed(2)
   return (
     <div>
       <div className="bg-white rounded-lg shadow-md p-6 border border-amber-200">
@@ -11,7 +14,7 @@ export const Chart = ({ items }) => {
                   <img src={item.imagen_url || "/placeholder.svg"} alt={item.titulo} className="w-16 h-16 object-cover rounded mr-4" />
                   <div>
                     <h2 className="text-lg font-semibold text-amber-900">{item.titulo}</h2>
-                    <p className="text-amber-700">${item.precio.toFixed(2)} each</p>
+                    <p className="text-amber-700">${precioFormatedo} each</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">

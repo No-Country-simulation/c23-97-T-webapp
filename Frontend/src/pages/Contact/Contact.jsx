@@ -6,7 +6,7 @@ export const Contact = () => {
     <Container>
     {/*<div className="flex flex-col min-h-screen">*/}
     <div className="flex flex-col gap-4 w-full items-center">
-        <h1 className="text-2xl font-bold text-black">Contact</h1>
+        <h1 className="text-2xl font-bold text-black">Contacto</h1>
     </div>
     </Container>
   )
