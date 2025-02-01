@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import ShoppingContainer from "../../components/ShoppingContainer";
 import Button from "../../components/Button";
 import { Link } from "react-router";
+import Chart from "../../components/Chart/Chart";
 
 const ShopingCart = () => {
   const { shoppingCart } = useContext(GlobalContext);
@@ -12,7 +13,7 @@ const ShopingCart = () => {
     <Container>
       {shoppingCart.length > 0 ? (
         <ShoppingContainer>
-          {shoppingCart.map((item) => item.product.titulo)}
+          {shoppingCart.map((item) => <Chart item={item}/>)}
         </ShoppingContainer>
       ) : (
         <div className="flex flex-col gap-4 w-full items-center">
