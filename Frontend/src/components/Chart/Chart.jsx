@@ -1,14 +1,15 @@
 import React from 'react'
+import Button from "../../components/Button";
+import { Link } from "react-router";
 
-
-
-export const Chart = ({ items }) => {
-  const precioFormatedo = Number(item.precio).toFixed(2)
+export const Chart = ({ items, handleUpdateQuantity, removeItem, clearCart, getTotalPrice }) => { // Recibe las funciones como props
   return (
     <div>
       <div className="bg-white rounded-lg shadow-md p-6 border border-amber-200">
           <ul className="divide-y divide-amber-200">
-            {items.map((item) => (
+            {items.map((item) => {
+            const precioFormatedo = Number(item.precio).toFixed(2); // Formatea el precio DENTRO del map
+            return (
               <li key={item.id} className="py-4 flex items-center justify-between">
                 <div className="flex items-center">
                   <img src={item.imagen_url || "/placeholder.svg"} alt={item.titulo} className="w-16 h-16 object-cover rounded mr-4" />
@@ -45,7 +46,8 @@ export const Chart = ({ items }) => {
                   </Button>
                 </div>
               </li>
-            ))}
+              )
+            })}
           </ul>
           <div className="mt-6 flex justify-between items-center border-t border-amber-200 pt-6">
             <p className="text-xl font-bold text-amber-900">Total: ${getTotalPrice().toFixed(2)}</p>
