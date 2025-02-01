@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import { GlobalContext } from "../../context/Context";
 import Button from "../../components/Button";
 import NotFound from "../NotFound";
+import Return from "../../components/Return";
 
 const Product = () => {
   const { products, addToCart } = useContext(GlobalContext);
@@ -21,6 +22,7 @@ const Product = () => {
 
   return (
     <Container>
+      <Return category={category} />
       <section className="grid grid-cols-2 gap-12 items-center md:grid-cols-[24rem_1fr] md:items-start md:gap-16 md:gap-y-12">
         <img
           className="w-full max-w-96 rounded-md col-start-1 row-start-1 md:row-end-3"
@@ -35,7 +37,7 @@ const Product = () => {
           <p className="text-pretty">{product.descripcion}</p>
           <span>${product.precio}</span>
           <div className="flex flex-col gap-4 w-52 self-center">
-            <Button func={() => addToCart(product)}>Add to cart</Button>
+            <Button func={() => addToCart(product)}>Añadir al carrito</Button>
           </div>
         </div>
 
