@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Button from "../../components/Button";
+import { GlobalContext } from "../../context/Context";
 
 export const Chart = ({ item }) => {
+  const { removeFromCart } = useContext(GlobalContext);
+
   const precioFormateado = Number(item.product.precio).toFixed(2);
 
   return (
@@ -16,20 +20,33 @@ export const Chart = ({ item }) => {
           <h2 className="text-sm md:text-lg font-semibold text-amber-900">
             {item.product.titulo}
           </h2>
-          <p className="text-xs md:text-sm text-amber-700">${precioFormateado} c/u</p>
+          <p className="text-xs md:text-sm text-amber-700">
+            ${precioFormateado} c/u
+          </p>
         </div>
       </div>
 
       {/* Controles de Cantidad y Botón de Remover */}
       <div className="flex items-center justify-between w-full md:w-auto space-x-1 md:space-x-2 mt-2 md:mt-0">
-        <Button primary={false} className="text-xs px-2 py-1">-</Button>
-        <span className="w-6 text-center text-sm md:text-lg">{item.quantity}</span>
-        <Button primary={false} className="text-xs px-2 py-1">+</Button>
-        <Button primary={false} className="text-xs px-2 py-1">Remover</Button>
+        <Button primary={false} className="text-xs px-2 py-1">
+          -
+        </Button>
+        <span className="w-6 text-center text-sm md:text-lg">
+          {item.quantity}
+        </span>
+        <Button primary={false} className="text-xs px-2 py-1">
+          +
+        </Button>
+        <Button
+          primary={false}
+          func={() => removeFromCart(item.product)}
+          className="text-xs px-2 py-1"
+        >
+          Remover
+        </Button>
       </div>
     </li>
   );
 };
 
 export default Chart;
-

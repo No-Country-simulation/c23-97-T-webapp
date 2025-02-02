@@ -85,6 +85,14 @@ const GlobalContextProvider = ({ children }) => {
     }
   };
 
+  const removeFromCart = (product) => {
+    setShoppingCart(
+      shoppingCart.filter(
+        (cartProduct) => cartProduct.product.id !== product.id
+      )
+    );
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -98,6 +106,7 @@ const GlobalContextProvider = ({ children }) => {
         clearCart,
         completePurchase,
         searchItems,
+        removeFromCart,
       }}
     >
       {children}
