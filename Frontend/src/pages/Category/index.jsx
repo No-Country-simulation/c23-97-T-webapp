@@ -19,18 +19,22 @@ const Category = () => {
 
   return (
     <Container>
-      <Search />
+      <Search category={category} />
 
       <section className="flex flex-wrap gap-10 justify-center mt-12">
-        {products
-          .filter(
-            (product) => product.categoria === category.toLocaleLowerCase()
-          )
-          .map((product) => (
-            <Link key={product.id} to={`/${category}/${product.id}`}>
-              <Card product={product} />
-            </Link>
-          ))}
+        {products.length > 0 ? (
+          products
+            .filter(
+              (product) => product.categoria === category.toLocaleLowerCase()
+            )
+            .map((product) => (
+              <Link key={product.id} to={`/${category}/${product.id}`}>
+                <Card product={product} />
+              </Link>
+            ))
+        ) : (
+          <p>No se encontraron productos</p>
+        )}
       </section>
     </Container>
   );

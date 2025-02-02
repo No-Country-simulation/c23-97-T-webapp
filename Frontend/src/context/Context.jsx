@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 export const GlobalContext = createContext();
 
@@ -8,10 +9,16 @@ const GlobalContextProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [purchased, setPurchased] = useState([]);
 
+  const { pathname } = useLocation();
+
   useEffect(() => {
     getData("productos", setProducts);
     getData("tarjetas", setCategories);
   }, []);
+
+  useEffect(() => {
+    getData("productos", setProducts);
+  }, [pathname]);
 
   const getData = async (endpoint, set) => {
     const response = await fetch(
@@ -19,6 +26,19 @@ const GlobalContextProvider = ({ children }) => {
     );
     const data = await response.json();
     set(data);
+  };
+
+  const searchItems = async (category, searchTerm) => {
+    if (!searchTerm) {
+      getData("productos", setProducts);
+      return;
+    }
+
+    const filteredItems = await fetch(
+      `https://apionline-a7w9.onrender.com/api/productos/${category}/?titulo=${searchTerm}`
+    );
+    const data = await filteredItems.json();
+    setProducts(data);
   };
 
   const totalItems = shoppingCart.reduce((acc, item) => acc + item.quantity, 0);
@@ -39,7 +59,6 @@ const GlobalContextProvider = ({ children }) => {
       })
     );
     setShoppingCart([]);
-
     console.log(purchased);
   };
 
@@ -78,6 +97,7 @@ const GlobalContextProvider = ({ children }) => {
         addToCart,
         clearCart,
         completePurchase,
+        searchItems,
       }}
     >
       {children}

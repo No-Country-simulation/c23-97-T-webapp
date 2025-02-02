@@ -13,7 +13,10 @@ const ShopingCart = () => {
     <Container>
       {shoppingCart.length > 0 ? (
         <ShoppingContainer>
-          {shoppingCart.map((item) => <Chart item={item}/>)}
+          {shoppingCart.map((item) => {
+            console.log(item);
+            return <Chart key={item.product.id} item={item} />;
+          })}
         </ShoppingContainer>
       ) : (
         <div className="flex flex-col gap-4 w-full items-center">
