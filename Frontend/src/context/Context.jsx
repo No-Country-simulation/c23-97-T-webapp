@@ -8,6 +8,7 @@ const GlobalContextProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [purchased, setPurchased] = useState([]);
+  const [newQuantity, setNewQuantity] = useState(1);
 
   const { pathname } = useLocation();
 
@@ -18,6 +19,7 @@ const GlobalContextProvider = ({ children }) => {
 
   useEffect(() => {
     getData("productos", setProducts);
+    setNewQuantity(1);
   }, [pathname]);
 
   const getData = async (endpoint, set) => {
@@ -59,8 +61,8 @@ const GlobalContextProvider = ({ children }) => {
       })
     );
     setShoppingCart([]);
-    console.log(purchased);
   };
+  console.log(purchased);
 
   const addToCart = (product) => {
     const itemExists = shoppingCart.find(
@@ -68,21 +70,57 @@ const GlobalContextProvider = ({ children }) => {
     );
 
     if (itemExists) {
-      setShoppingCart(
-        shoppingCart.map((cartProduct) => {
-          if (cartProduct.product.id === product.id) {
+      updateQuantity(itemExists, newQuantity);
+    } else {
+      setShoppingCart((prevState) => [
+        ...prevState,
+        { product, quantity: newQuantity },
+      ]);
+    }
+  };
+
+  const updateQuantity = (item, quantity) => {
+    setShoppingCart(
+      shoppingCart
+        .map((cartProduct) => {
+          if (cartProduct.product.id === item.product.id) {
+            const newQuantity = cartProduct.quantity + quantity;
+            if (newQuantity <= 0) {
+              removeFromCart(item.product);
+              return null;
+            }
+
             return {
               ...cartProduct,
-              quantity: cartProduct.quantity + 1,
+              quantity: newQuantity,
             };
           } else {
             return cartProduct;
           }
         })
-      );
-    } else {
-      setShoppingCart((prevState) => [...prevState, { product, quantity: 1 }]);
+        .filter(Boolean)
+    );
+  };
+
+  const handleDecrement = (item) => {
+    if (!item) {
+      if (newQuantity === 1) {
+        return;
+      }
+      setNewQuantity(newQuantity - 1);
+      return;
     }
+
+    updateQuantity(item, -1);
+  };
+
+  const handleIncrement = (item) => {
+    if (!item) {
+      setNewQuantity(newQuantity + 1);
+      return;
+    }
+
+    updateQuantity(item, 1);
   };
 
   const removeFromCart = (product) => {
@@ -102,11 +140,14 @@ const GlobalContextProvider = ({ children }) => {
         totalItems,
         totalPrice,
         purchased,
+        newQuantity,
         addToCart,
         clearCart,
         completePurchase,
         searchItems,
         removeFromCart,
+        handleDecrement,
+        handleIncrement,
       }}
     >
       {children}

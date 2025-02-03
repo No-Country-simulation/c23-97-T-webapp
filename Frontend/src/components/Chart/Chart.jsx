@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Button from "../../components/Button";
 import { GlobalContext } from "../../context/Context";
+import Quantity from "../Quantity";
 
 export const Chart = ({ item }) => {
   const { removeFromCart } = useContext(GlobalContext);
@@ -28,15 +29,7 @@ export const Chart = ({ item }) => {
 
       {/* Controles de Cantidad y Botón de Remover */}
       <div className="flex items-center justify-between w-full md:w-auto space-x-1 md:space-x-2 mt-2 md:mt-0">
-        <Button primary={false} className="text-xs px-2 py-1">
-          -
-        </Button>
-        <span className="w-6 text-center text-sm md:text-lg">
-          {item.quantity}
-        </span>
-        <Button primary={false} className="text-xs px-2 py-1">
-          +
-        </Button>
+        <Quantity item={item} />
         <Button
           primary={false}
           func={() => removeFromCart(item.product)}
