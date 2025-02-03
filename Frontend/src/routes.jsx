@@ -5,11 +5,11 @@ import Product from "./pages/Product";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import ShopingCart from "./pages/ShopingCart";
-import About_us from "./pages/About_us/About_us";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import ScrollTop from "./components/ScrollTop";
+import HistoryPage from "./pages/HistoryPage";
 
 function AppRoutes() {
   return (
@@ -18,7 +18,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<BasePage />}>
           <Route index element={<Landing />} />
-          <Route path="about_us" element={<About_us />} />
+          <Route path="history" element={<HistoryPage />} />
           <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />

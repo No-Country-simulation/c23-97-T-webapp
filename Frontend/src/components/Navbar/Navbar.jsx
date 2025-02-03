@@ -35,16 +35,16 @@ export const Navbar = () => {
               Inicio
             </li>
           </Link>
-          <Link to="/about_us">
+          <Link to="/history">
             <li
-              onClick={() => setMenu("about_us")}
+              onClick={() => setMenu("history")}
               className={`cursor-pointer hover:text-[#8a7560] ${
-                menu === "about_us"
+                menu === "history"
                   ? "text-[#8a7560] border-b-2 border-[#8a7560]"
                   : ""
               }`}
             >
-              Nosotros
+              Historial
             </li>
           </Link>
           <Link to="/services">
@@ -100,12 +100,12 @@ export const Navbar = () => {
           Inicio {/* Texto dentro del Link */}
         </Link>
         <Link
-          to="/about_us"
+          to="/history"
           className={`flex-1 text-center py-2 ${
-            menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"
+            menu === "history" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          Nosotros
+          Historial
         </Link>
         <Link
           to="/services"

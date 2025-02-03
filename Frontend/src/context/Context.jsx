@@ -62,7 +62,6 @@ const GlobalContextProvider = ({ children }) => {
     );
     setShoppingCart([]);
   };
-  console.log(purchased);
 
   const addToCart = (product) => {
     const itemExists = shoppingCart.find(
