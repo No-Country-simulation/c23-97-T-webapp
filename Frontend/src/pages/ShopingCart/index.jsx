@@ -14,7 +14,6 @@ const ShopingCart = () => {
       {shoppingCart.length > 0 ? (
         <ShoppingContainer>
           {shoppingCart.map((item) => {
-            console.log(item);
             return <Chart key={item.product.id} item={item} />;
           })}
         </ShoppingContainer>

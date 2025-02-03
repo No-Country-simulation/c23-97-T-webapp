@@ -44,7 +44,7 @@ export const Navbar = () => {
                   : ""
               }`}
             >
-              Sobre nosotros
+              Nosotros
             </li>
           </Link>
           <Link to="/services">
@@ -105,7 +105,7 @@ export const Navbar = () => {
             menu === "about_us" ? "text-[#8a7560]" : "text-[#181411]"
           }`}
         >
-          Sobre nosotros
+          Nosotros
         </Link>
         <Link
           to="/services"
