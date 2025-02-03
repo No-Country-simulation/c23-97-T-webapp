@@ -5,6 +5,7 @@ import { GlobalContext } from "../../context/Context";
 import Button from "../../components/Button";
 import NotFound from "../NotFound";
 import Return from "../../components/Return";
+import Quantity from "../../components/Quantity";
 
 const Product = () => {
   const { products, addToCart } = useContext(GlobalContext);
@@ -35,8 +36,11 @@ const Product = () => {
             {product.titulo}
           </h2>
           <p className="text-pretty">{product.descripcion}</p>
-          <span>${product.precio}</span>
-          <div className="flex flex-col gap-4 w-52 self-center">
+          <span className="text-[#8a7560] font-bold text-lg underline underline-offset-4">
+            ${product.precio}
+          </span>
+          <div className="flex flex-col gap-4 w-full items-center lg:flex-row lg:justify-evenly">
+            <Quantity />
             <Button func={() => addToCart(product)}>Añadir al carrito</Button>
           </div>
         </div>
