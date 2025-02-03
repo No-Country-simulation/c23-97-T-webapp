@@ -20,6 +20,9 @@ const Category = () => {
   return (
     <Container>
       <Search category={category} />
+      <p className="self-start text-gray-500 text-sm mt-2">
+        * Para ver todos los productos, haz click en el botón de buscar
+      </p>
 
       <section className="flex flex-wrap gap-10 justify-center mt-12">
         {products.length > 0 ? (
