@@ -1,6 +1,7 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import React from 'react'
 import Container from "../../components/Container";
+import Button from "../../components/Button";
 import MapaLink from "../../components/Mapa/MapaLink";
 import WhatsappLink from "../../components/WhatsappLink/WhatsappLink";
 
@@ -65,13 +66,14 @@ export const Contact = () => {
           placeholder="Escribe tu mensaje aquí..."
           required
         ></textarea>
-
-        <button
-          type="submit"
-          className="w-full bg-amber-900 text-white py-2 rounded-lg hover:bg-amber-700"
-        >
-          Enviar Mensaje
-        </button>
+        <div class="flex justify-center">
+          <Button
+            type="submit"
+            className="w-full bg-amber-900 text-white py-2 rounded-lg hover:bg-amber-700"
+          >
+            Enviar Mensaje
+          </Button>
+        </div>
       </form>      
     </div>   
     {/*<div className="flex flex-col min-h-screen">
