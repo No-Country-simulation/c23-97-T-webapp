@@ -220,6 +220,6 @@ Las tecnologías que se utilizaron para crear el proyecto:<br><br>
 
 Este proyecto fue desarrollado por los siguientes colaboradores:
 
-- **Juan Micozzi** - _Backend_ - [robicombi](https://github.com/robicombi)
-- **Leandro Eduardo Dziej** - _Frontend_ - [LeandroDziej](https://github.com/LeandroDziej)
 - **Edward Botello** - _Frontend_ - [EdwardbotA](https://github.com/EdwardbotA)
+- **Leandro Eduardo Dziej** - _Frontend_ - [LeandroDziej](https://github.com/LeandroDziej)
+- **Juan Micozzi** - _Backend_ - [robicombi](https://github.com/robicombi)
