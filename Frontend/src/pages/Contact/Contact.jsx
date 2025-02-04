@@ -2,18 +2,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import React from 'react'
 import Container from "../../components/Container";
 import MapaLink from "../../components/Mapa/MapaLink";
-import { FaWhatsapp } from "react-icons/fa"; // Importa el icono de WhatsApp
-
-const WhatsappLink = ({ telefono }) => {
-  const whatsappUrl = `https://wa.me/${telefono}`;
-
-  return (
-    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-      <FaWhatsapp className="text-2xl text-amber-900" /> {/* Icono de WhatsApp */}
-      {telefono}
-    </a>
-  );
-};
+import WhatsappLink from "../../components/WhatsappLink/WhatsappLink";
 
 export const Contact = () => {
   return (
@@ -26,17 +15,22 @@ export const Contact = () => {
         {/* Información de contacto */}
         <div className="flex flex-col sm:flex-row sm:justify-between gap-6 w-full max-w-3xl mb-10">
           <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-md w-full sm:w-1/3">
-            <FaEnvelope className="text-2xl text-amber-900" />
-            <a href="mailto:contacto@qrsharepro.com" className="text-gray-700 hover:underline"> {/* Make email clickable */}
-              contacto@qrsharepro.com
+            <span className="text-2xl text-amber-900 flex items-center"> {/* Envuelve el icono en un span */}
+              <FaEnvelope /> 
+            </span>
+            <a href="mailto:contacto@qrsharepro.com" className="text-gray-700 hover:underline flex items-center">
+              contact@qrshpr.com
             </a>
           </div>
-          <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-md w-full sm:w-1/3">
-            <FaPhone className="text-2xl text-amber-900" />
-            <a href="tel:+541112345678" className="text-gray-700 hover:underline"> {/* Make phone clickable */}
+          {/*<div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-md w-full sm:w-1/3">
+            <span className="text-2xl text-amber-900 flex items-center">
+              <FaPhone />
+            </span>
+            <a href="tel:+541112345678" className="text-gray-700 hover:underline flex items-center">
               +54 11 1234-5678
             </a>
-          </div>
+          </div>*/}
+          <WhatsappLink telefono="541112345678" />
           <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-md w-full sm:w-1/3">
             <FaMapMarkerAlt className="text-2xl text-amber-900" />
             <MapaLink 
