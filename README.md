@@ -142,7 +142,7 @@ http://127.0.0.1:8000/admin/
 <br>
 
 ### Tarjetas
-Para ver <ins>todas</ins> las tarjetas, que muestran información de las categorías y están en la parte de abajo de todo de la página home.
+Para ver <ins>todas</ins> las tarjetas, que muestran información de las categorías que están en la parte de abajo de todo de la página home.
 ```bash
 http://127.0.0.1:8000/api/tarjetas/
 ```
