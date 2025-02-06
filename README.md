@@ -223,6 +223,7 @@ Este proyecto fue desarrollado por los siguientes colaboradores:
 - **Edward Botello** - _Frontend_ - [EdwardbotA](https://github.com/EdwardbotA)
 - **Leandro Eduardo Dziej** - _Frontend_ - [LeandroDziej](https://github.com/LeandroDziej)
 - **Juan Micozzi** - _Backend_ - [robicombi](https://github.com/robicombi)
+<br>
 
 ---
 
