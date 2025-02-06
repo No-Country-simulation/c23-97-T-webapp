@@ -1,0 +1,10 @@
+.mapa-link {
+    color: inherit; /* Conserva el color del texto */
+    text-decoration: none; /* Quita el subrayado por defecto */
+  }
+  
+  .mapa-link:hover {
+    text-decoration: underline; /* Subraya al pasar el cursor */
+    /* color: blue; /* Cambia el color al pasar el cursor (opcional) */
+  }
+
