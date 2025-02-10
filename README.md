@@ -5,6 +5,8 @@ No Country - Simulación laboral - Cohorte 23 (Enero 2025)<br><br>
 
 La pagina se dedica a la venta de ropa online la cual tienes la funcionalidad de mostrar un codigo QR que sirve para que lo puedas buscar de una forma rapida y sencilla sin clicks. este servicio le ahorra tiempo y reduce las complicaciones al compartir información asi puede enfocarse en sus tareas mientras sus compañeros acceden fácilmente a los productos.
 
+![001](https://github.com/user-attachments/assets/a2bc607f-7b07-4b1d-bc95-44a9e30ef50c)
+
 ![ejempo](https://github.com/user-attachments/assets/b1a3b50a-26e9-48c6-865c-2dc327e51891)<br><br>
 
 ## Comenzando 🚀
